@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <h1>Design for Grid</h1>
+
+    <section>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.0/lib/anime.min.js"></script>
+    <script>
+
+        let grids = document.querySelectorAll('div');
+        let num = 0;
+
+        const delay = time => new Promise(resolve => setTimeout(
+            resolve, time));
+        grids.forEach(grid => {
+
+            delay(0).then(() => {
+                setTimeout(() => {
+                    grid.style.backgroundColor = 'lightblue';
+                }, num += 100)
+            })
+            delay(500).then(() => {
+                setTimeout(() => {
+                    grid.style.backgroundColor = 'rgb(228,242,255)';
+                    grid.style.width = '90%';
+                }, num += 100)
+
+            })
+
+        })
+
+    </script>
+
+</body>
+
+</html>
